@@ -17,12 +17,8 @@
 
 // Modules:
 var fx = require('money'),
-	oxr = require('open-exchange-rates');
-
-// Set App ID (required):
-oxr.set({
-	app_id: 'YOUR_APP_ID'
-});
+	OpenExchangeRates = require('open-exchange-rates');
+var oxr = new OpenExchangeRates({app_id: 'YOUR_APP_ID'});
 
 // Get latest exchange rates from API; pass to callback function when loaded:
 oxr.latest(function(error) {

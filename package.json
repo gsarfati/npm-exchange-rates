@@ -1,5 +1,5 @@
 {
-	"name" : "open-exchange-rates",
+	"name" : "prototype-open-exchange-rates",
 	"description" : "nodeJS/npm wrapper for the Open Exchange Rates API",
 	"homepage": "https://openexchangerates.org",
 	"keywords" : ["exchange", "rate", "rates", "api", "realtime", "currency", "conversion", "money", "fx", "loader", "utilities", "accounting", "forex", "finance"],
@@ -13,7 +13,7 @@
 	},
 	"repository" : {
 		"type": "git",
-		"url": "git://github.com/openexchangerates/npm-exchange-rates.git"
+		"url": "git://github.com/axisk/npm-exchange-rates.git"
 	},
 	"main" : "open-exchange-rates.js",
 	"version" : "0.3.0"

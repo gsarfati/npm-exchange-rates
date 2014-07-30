@@ -4,6 +4,9 @@ nodeJS/npm wrapper for the **[Open Exchange Rates API](http://openexchangerates.
 
 Requires a free or paid App ID to connect to the service, **[available here](https://openexchangerates.org/signup "Open Exchange Rates API App ID API Key signup")**.
 
+## Forked
+
+This fork allows having multiple oxr objects with different api keys and bases.
 
 ## Introduction
 
@@ -27,7 +30,7 @@ See the **example.js** script in this repository for a basic, working example.
 
 	var oxr = require('open-exchange-rates');
 	oxr.set({ app_id: 'YOUR_APP_ID' })
-	
+
 	oxr.latest(function() {
 		// You can now use `oxr.rates`, `oxr.base` and `oxr.timestamp`
 	});
@@ -36,7 +39,7 @@ See the **example.js** script in this repository for a basic, working example.
 
 	var oxr = require('open-exchange-rates');
 	oxr.set({ app_id: 'YOUR_APP_ID' })
-	
+
 	oxr.historical('2001-02-03', function() {
 		// You can now use `oxr.rates`, `oxr.base` and `oxr.timestamp`
 	});
@@ -47,14 +50,14 @@ See the **example.js** script in this repository for a basic, working example.
 
 	var oxr = require('open-exchange-rates'),
 		fx = require('money');
-	
+
 	oxr.set({ app_id: 'YOUR_APP_ID' })
-	
+
 	oxr.latest(function() {
 		// Apply exchange rates and base rate to `fx` library object:
 		fx.rates = oxr.rates;
 		fx.base = oxr.base;
-		
+
 		// money.js is ready to use:
 		fx(100).from('HKD').to('GBP'); // ~8.0424
 	});
