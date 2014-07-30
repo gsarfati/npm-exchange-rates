@@ -56,7 +56,7 @@ OpenExchangeRates.prototype.load = function(path, callback) {
   path = (typeof path === 'string') ? path : 'latest.json';
 
   // Build API URL
-  var url = this.api_url + path + '?app_id=' + this.app_id;
+  var url = this.api_url + path + '?app_id=' + this.app_id + '&base=' + this.base;
 
   // Create the http-agent that will grab the data:
   var agent = require('http-agent').create('', [{
