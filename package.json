@@ -16,5 +16,5 @@
 		"url": "git://github.com/axisk/npm-exchange-rates.git"
 	},
 	"main" : "open-exchange-rates.js",
-	"version" : "0.3.0"
+	"version" : "0.3.1"
 }
